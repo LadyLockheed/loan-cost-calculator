@@ -1,13 +1,14 @@
 
 import './App.css'
+import Slider from './Components/Rangeslider/Slider'
 
 function App() {
 
 
   return (
-    <>
-      <p>hej</p>
-    </>
+    <div className='main-container'>
+      <Slider/>
+    </div>
   )
 }
 
