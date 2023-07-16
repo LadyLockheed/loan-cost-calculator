@@ -1,0 +1,23 @@
+.slider {
+    appearance: none;
+    width: 70%;
+    height: 25px;
+    background: #c58ea7;
+    transition: background-color 0.2s ease-in-out;
+    /* border: 2px solid rgb(40, 70, 95); */
+    border-radius: 5px; 
+}
+.slider:hover {
+    background-color: rgb(241, 188, 212);
+    cursor: pointer;
+
+}
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #0d3843;
+    /* border: 2px solid #ccc; */
+    border-radius: 50%;
+    cursor: pointer;
+  }
