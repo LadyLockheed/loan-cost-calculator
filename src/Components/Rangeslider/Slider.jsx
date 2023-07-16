@@ -1,21 +1,26 @@
-import { useState } from 'react'
 import './SliderStyle.css'
 
-const Slider = () => {
-
-    const [value, setValue] =useState()
+const Slider = (props) => {
+   
+    const { 
+        value, 
+        setValue,
+        min, 
+        max, 
+        step,
+        label } = props
 
     return <>
+            <label for='range'>{label}</label>
                 <input 
                 type='range'
                 className='slider'
-                min='20000' 
-                max='200000'
-                step='10000' 
+                id='range'
+                min={min}
+                max={max}
+                step={step} 
                 value={value}
-                    onChange={({ target: { value: radius } }) => {
-                        setValue(radius);
-                    }}
+                onChange={(e)=> setValue(e.target.value)}
                 />
             </>
 
