@@ -32,6 +32,8 @@ function App() {
 
       <h1>Loan calculator</h1>
 
+      <Infobox amountPerMonth={amountPerMonth}/>
+
       <div className='slider-container'>
         <Slider
           value={amount} 
