@@ -15,7 +15,9 @@ function App() {
   const baseURL='/loan-application/'
 
   useEffect(()=> {
+
     setAmountPerMonth(countMonthlyCost(amount, periodRangeInYear))
+    
   },[amount, periodRangeInYear])
 
   return (

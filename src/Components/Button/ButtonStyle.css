@@ -1,4 +1,4 @@
-button {
+.url-button {
     border-radius: 5px;
     border: none;
     background-color: rgb(21, 155, 189);
@@ -8,10 +8,7 @@ button {
     height: 2.5rem;
     
 }
-
-button:hover {
+.url-button:hover {
     cursor: pointer;
     background-color: rgb(32, 189, 228);
-    
-    
 }

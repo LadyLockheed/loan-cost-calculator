@@ -6,11 +6,11 @@ const Infobox = (props) => {
 
     return (
         <>
-        <div className='box'>
-            <p className='text-headline'>Example of monthly cost</p>
-            <p className='text-amount'>{amountPerMonth} SEK/month</p>
-            <div className='arrow'></div>
-        </div>
+            <div className='box'>
+                <p className='text-headline'>Example of monthly cost</p>
+                <p className='text-amount'>{amountPerMonth} SEK/month</p>
+                <div className='arrow'></div>
+            </div>
         </>
     )
 }

@@ -4,12 +4,12 @@ const Button = (props)=> {
 
     const {label, url} = props
 
-    const handleClick = ()=> {
+    const sendToUrl = ()=> {
         console.log('you are currently beeing forwared to this url: ', url)
     }
     
     return (
-        <button onClick={handleClick}>{label}</button>
+        <button onClick={sendToUrl} className='url-button'>{label}</button>
     )
 }
 

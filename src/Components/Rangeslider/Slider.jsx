@@ -12,7 +12,6 @@ const Slider = (props) => {
         unit } = props
 
     return <div className='slider-wrapper'>
-                
                 <p className='text-range'>{`From ${min} ${unit}`}</p>
                 <label for='range'>{label}</label>
                 <input 
@@ -25,7 +24,7 @@ const Slider = (props) => {
                 value={value}
                 onChange={(e)=> setValue(e.target.value)}
                 />
-                <p className='text-current-amount'>{value}</p>
+                <p className='text-current-amount'>{`${value} ${unit}`}</p>
             </div>
 
 }
