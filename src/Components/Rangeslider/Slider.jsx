@@ -13,7 +13,7 @@ const Slider = (props) => {
 
     return <div className='slider-wrapper'>
                 <p className='text-range'>{`From ${min} ${unit}`}</p>
-                <label for='range'>{label}</label>
+                <label htmlFor='range'>{label}</label>
                 <input 
                 type='range'
                 className={`slider ${unit}`}
