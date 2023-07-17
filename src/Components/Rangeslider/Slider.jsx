@@ -8,13 +8,16 @@ const Slider = (props) => {
         min, 
         max, 
         step,
-        label } = props
+        label,
+        unit } = props
 
-    return <>
-            <label for='range'>{label}</label>
+    return <div className='slider-wrapper'>
+                
+                <p className='text-range'>{`From ${min} ${unit}`}</p>
+                <label for='range'>{label}</label>
                 <input 
                 type='range'
-                className='slider'
+                className={`slider ${unit}`}
                 id='range'
                 min={min}
                 max={max}
@@ -22,7 +25,8 @@ const Slider = (props) => {
                 value={value}
                 onChange={(e)=> setValue(e.target.value)}
                 />
-            </>
+                <p className='text-current-amount'>{value}</p>
+            </div>
 
 }
 

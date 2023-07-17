@@ -1,0 +1,4 @@
+.slider-container {
+    grid-row: 5/7;
+    grid-column: 1/11;
+}
