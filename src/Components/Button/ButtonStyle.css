@@ -3,7 +3,7 @@ button {
     border: none;
     background-color: rgb(21, 155, 189);
     transition: background-color 0.2s ease-in-out;
-    grid-row: 7;
+    grid-row: 8;
     grid-column: 8/10;
     height: 2.5rem;
     
