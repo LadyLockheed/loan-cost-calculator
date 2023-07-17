@@ -6,9 +6,11 @@ import './App.css';
 import './Components/Rangeslider/SliderContainer.css'
 
 function App() {
+
   const [amount, setAmount] = useState(20000);
   const [periodRangeInYear, setPeriodRangeInYear] = useState(2);
   const [amountPerMonth, setAmountPerMonth] = useState()
+  const baseURL='/loan-application/'
 
   const countMonthlyCost = (amount, periodRangeInYear) => {
     const yearlyInterest = 9.9/100
@@ -16,13 +18,10 @@ function App() {
     const amountOfMonths = periodRangeInYear * 12
     const calculatedResult = amount * monthlyInterest * (Math.pow((1+ monthlyInterest), amountOfMonths)) / (Math.pow((1+monthlyInterest), amountOfMonths))-1
 
-    console.log(calculatedResult)
     return calculatedResult
-    
   }
 
   useEffect(()=> {
-    console.log('chaning')
     setAmountPerMonth(countMonthlyCost(amount, periodRangeInYear))
   },[amount, periodRangeInYear])
 
@@ -57,6 +56,7 @@ function App() {
 
       <Button
         label={'To the application'}
+        url={`${baseURL}?amount=${amount}&months=${periodRangeInYear * 12}`}
       />
 
     </div>

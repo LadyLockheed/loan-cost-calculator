@@ -2,9 +2,14 @@ import './ButtonStyle.css'
 
 const Button = (props)=> {
 
-    const {label} = props
+    const {label, url} = props
+
+    const handleClick = ()=> {
+        console.log('you are currently beeing forwared to this url: ', url)
+    }
+    
     return (
-        <button>{label}</button>
+        <button onClick={handleClick}>{label}</button>
     )
 }
 
