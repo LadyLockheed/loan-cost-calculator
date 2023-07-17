@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Slider from './Components/Rangeslider/Slider'
 import Infobox from './Components/Infobox/Infobox'
 import Button from './Components/Button/Button'
+import { countMonthlyCost } from './Utils/CostCalculations.js'
 import './App.css';
 import './Components/Rangeslider/SliderContainer.css'
 
@@ -10,16 +11,8 @@ function App() {
   const [amount, setAmount] = useState(20000);
   const [periodRangeInYear, setPeriodRangeInYear] = useState(2);
   const [amountPerMonth, setAmountPerMonth] = useState()
+
   const baseURL='/loan-application/'
-
-  const countMonthlyCost = (amount, periodRangeInYear) => {
-    const yearlyInterest = 9.9/100
-    const monthlyInterest = yearlyInterest / 12
-    const amountOfMonths = periodRangeInYear * 12
-    const calculatedResult = amount * monthlyInterest * (Math.pow((1+ monthlyInterest), amountOfMonths)) / (Math.pow((1+monthlyInterest), amountOfMonths))-1
-
-    return calculatedResult
-  }
 
   useEffect(()=> {
     setAmountPerMonth(countMonthlyCost(amount, periodRangeInYear))
