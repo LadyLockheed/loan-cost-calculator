@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import Slider from './Components/Rangeslider/Slider'
 import Infobox from './Components/Infobox/Infobox'
+import Button from './Components/Button/Button'
 import './App.css';
 import './Components/Rangeslider/SliderContainer.css'
-
 
 function App() {
   const [amount, setAmount] = useState(20000);
@@ -19,7 +19,6 @@ function App() {
     console.log(calculatedResult)
     return calculatedResult
     
-  
   }
 
   useEffect(()=> {
@@ -35,25 +34,30 @@ function App() {
       <Infobox amountPerMonth={amountPerMonth}/>
 
       <div className='slider-container'>
-        <Slider
-          value={amount} 
-          setValue={setAmount}
-          min={'20000'}  
-          max={'200000'}
-          step={'10000'}
-          label={'Loan amount'}
-          unit={'SEK'}
-          />
-        <Slider 
-          value={periodRangeInYear} 
-          setValue={setPeriodRangeInYear}
-          min={'2'}  
-          max={'10'}
-          step={'1'}
-          label={'Range period'}
-          unit={'years'}
-          />
-      </div>
+          <Slider
+            value={amount} 
+            setValue={setAmount}
+            min={'20000'}  
+            max={'200000'}
+            step={'10000'}
+            label={'Loan amount'}
+            unit={'SEK'}
+            />
+          <Slider 
+            value={periodRangeInYear} 
+            setValue={setPeriodRangeInYear}
+            min={'2'}  
+            max={'10'}
+            step={'1'}
+            label={'Range period'}
+            unit={'years'}
+
+            />
+        </div>
+
+      <Button
+        label={'To the application'}
+      />
 
     </div>
   );
